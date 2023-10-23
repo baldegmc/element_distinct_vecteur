@@ -1,0 +1,35 @@
+ALGORITHM somme_element_distinct
+VAR
+    tab1,tab2: ARRAY_OF type[n];
+    i,j,s : entier
+    n1,n2  : reel
+    trouve : BOOLEAN
+    
+BEGIN
+    write("donner la taille du  premier tableau")
+    lire(n1)
+    write("donner la taille du  deuxieme tableau")
+    lire(n2)
+    FOR i FROM 0 TO n1-1 STEP 1  DO
+     FOR j FROM 0 TO n2-1 STEP 0  DO
+      IF (tab1(i)==tab2(j)) THEN
+        trouve=true
+      END_IF  
+     END_FOR
+     IF (trouve==false) THEN
+         s = s + tab1(i)
+     END_IF
+    END_FOR
+    FOR j FROM 0 TO n2-1 STEP 1  DO
+        FOR i FROM 0 TO n-1 STEP 1  DO
+            IF (tab2(j)==tab2(i)) THEN
+                trouve = true
+            END_IF
+        END_FOR
+        IF (trouve==false) THEN
+            s = s + tab2(j)
+        END_IF
+    END_FOR
+
+
+END
